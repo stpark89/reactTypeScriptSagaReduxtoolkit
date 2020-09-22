@@ -1,17 +1,17 @@
 #### 설치 모듈  ###
 
-// CRA - Typescript 설치
- npx create-react-app 소문자프로젝트명 --template typescript
+CRA - Typescript 설치
+  npx create-react-app 소문자프로젝트명 --template typescript
 
-// axios 섩치
- yarn add axios 
- yarn add --dev @types/axios
+axios 섩치
+  yarn add axios 
+  yarn add --dev @types/axios
 
-3. redux 설치 
+3.redux 설치 
 yarn add redux react-redux
 yarn add --dev @types/react-reudx
 
-4. redux-saga 설치
+4.redux-saga 설치
 yarn add redux-saga
 yarn add --dev @types/redux-saga
 

@@ -78,12 +78,12 @@ yarn add @material-ui/lab
  ## 1.1.1. 액션 타입 선언 
   - 타입스크립트를 활용하여 enum 으로 작업. 
   - 보통 액션은 request, success, fail 3가지의 타입을 가지고 있음. 
-  - export enum RUN_COUNT_FUNCTION { 
-  - REQUEST = 'RUN_COUNT_FUNCTION_REQUEST' ...
-  - }
+   export enum RUN_COUNT_FUNCTION { 
+      REQUEST = 'RUN_COUNT_FUNCTION_REQUEST' ...
+   }
  ## 1.1.2. 실제 액션을 생성해주는 부분 
   - reduxjs/toolkit 라이브러리 메서드중 createAction 이라는 메서드가 존재함
-  - export const addRequestFunction = createAction<number>(
+  - export const addRequestFunction = createAction<number>( RUN_COUNT_FUNCTION.REQUEST);
   
   
  # 1.2.saga.ts 확인
@@ -106,7 +106,8 @@ yarn add @material-ui/lab
     modules 디렉 토리 내부에 보면 각 메뉴별 sample, user 디렉토리가 존재함. 실제 개발할때 만드는 화면에 따라 디렉토리를 구분하여 action,saga,reducer, selector 총 4개 파일을 만들어서 작업하면됨 
     saga 에 추가되는 메서드 들은 rootSaga 내부에 메서드명을 적으면 적용 완료
     
-  
+ 
+ 
     
   
     

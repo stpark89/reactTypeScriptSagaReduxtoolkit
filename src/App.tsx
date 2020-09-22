@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FunctionComponent, useEffect, useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { useDispatch, useSelector } from "react-redux";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import LoginContainer from "containers/login/loginContainer";
 
-function App() {
+const App: FunctionComponent = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DndProvider backend={HTML5Backend}>
+      <Router>
+        <Switch>
+          <Route path={["/signIn", "sign-in"]}>
+            <LoginContainer />
+          </Route>
+          <Route path="*">
+            <div>
+              <p>에러</p>
+            </div>
+          </Route>
+        </Switch>
+      </Router>
+    </DndProvider>
   );
-}
+};
 
 export default App;

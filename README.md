@@ -75,9 +75,15 @@ yarn add @material-ui/lab
 
 1.Duck 패턴 적용. 리덕스 사가, 리덕스 사용시 
  # 1.1.action.ts 확인 
- ## 1.1.1. 액션 타입 선언 - 타입스크립트를 활용하여 enum 으로 작업. 
+ ## 1.1.1. 액션 타입 선언 
+  - 타입스크립트를 활용하여 enum 으로 작업. 
   - 보통 액션은 request, success, fail 3가지의 타입을 가지고 있음. 
-  
+  - export enum RUN_COUNT_FUNCTION { 
+  - REQUEST = 'RUN_COUNT_FUNCTION_REQUEST' ...
+  - }
+ ## 1.1.2. 실제 액션을 생성해주는 부분 
+  - reduxjs/toolkit 라이브러리 메서드중 createAction 이라는 메서드가 존재함
+  - export const addRequestFunction = createAction<number>(
   
   
  # 1.2.saga.ts 확인

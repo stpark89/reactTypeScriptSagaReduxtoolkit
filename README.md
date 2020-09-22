@@ -1,9 +1,9 @@
 #### 설치 모듈  ###
 
-CRA - Typescript 설치
+1.CRA - Typescript 설치
   npx create-react-app 소문자프로젝트명 --template typescript
 
-axios 섩치
+2.axios 섩치
   yarn add axios 
   yarn add --dev @types/axios
 

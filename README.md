@@ -75,6 +75,11 @@ yarn add @material-ui/lab
 
 1.Duck 패턴 적용. 리덕스 사가, 리덕스 사용시 
  # 1.1.action.ts 확인 
+ ## 1.1.1. 액션 타입 선언 - 타입스크립트를 활용하여 enum 으로 작업. 
+  - 보통 액션은 request, success, fail 3가지의 타입을 가지고 있음. 
+  
+  
+  
  # 1.2.saga.ts 확인
  # 1.3.reducer.ts 확인 
  

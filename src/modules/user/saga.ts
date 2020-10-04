@@ -20,6 +20,7 @@ export function* fetchLoginuserFunction$({
       typeof api.user.signIn
     >> = yield call(api.user.signIn, requestVo);
 
+    // put 은 디스패치와 같은 역할.
     yield put(fetchLoginuserSuccess(isLogin));
     return isLogin;
   } catch (err) {

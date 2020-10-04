@@ -6,15 +6,16 @@ import {
   fetchLoginuserRequest,
   fetchLoginuserSuccess,
 } from "./action";
+import { stringify } from "querystring";
 
 export interface IUserState {
-  userInfo: UserResponsetVo;
+  mochung: UserResponsetVo;
   pending: boolean;
   error: Error | null;
 }
 
 const createInitialState = (): IUserState => ({
-  userInfo: emptyUserInfo,
+  mochung: emptyUserInfo,
   pending: false,
   error: null,
 });
@@ -31,7 +32,7 @@ export const reducer = createReducer(createInitialState(), (builder) =>
       createNextState<IUserState>(state)({
         pending: false,
         error: null,
-        userInfo: responseVo,
+        mochung: responseVo,
       })
     )
     .addCase(fetchLoginFail, (state, { payload: error }) =>

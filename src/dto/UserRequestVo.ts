@@ -1,22 +1,25 @@
 export interface IUserRequestVo {
-  userId: string;
-  userPwd: string;
+  username: string;
+  password: string;
 }
 
 export default class UserRequestVo implements IUserRequestVo {
-  public userId: string;
+  public username: string;
 
-  public userPwd: string;
+  public password: string;
 }
 
-export const create = ({ userId, userPwd }: IUserRequestVo): UserRequestVo => {
+export const create = ({
+  username,
+  password,
+}: IUserRequestVo): UserRequestVo => {
   const next = new UserRequestVo();
-  next.userId = userId;
-  next.userPwd = userPwd;
+  next.username = username;
+  next.password = password;
   return next;
 };
 
 export const empty = create({
-  userId: "",
-  userPwd: "",
+  username: "",
+  password: "",
 });

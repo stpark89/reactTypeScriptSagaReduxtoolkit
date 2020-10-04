@@ -1,11 +1,13 @@
 import React, { FunctionComponent } from "react";
+import SlateComponent from "./editor/Slate";
 
-const indexComponent: FunctionComponent = () => {
+const MainComponent: FunctionComponent = () => {
   return (
     <div>
       <p>인덱스</p>
+      <SlateComponent />
     </div>
   );
 };
 
-export default indexComponent;
+export default MainComponent;

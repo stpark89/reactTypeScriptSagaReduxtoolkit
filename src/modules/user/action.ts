@@ -6,15 +6,12 @@ export enum FETCH_LOGIN_USER {
   SUCCESS = "FETCH_LOGIN_USER_SUCCESS",
   FAIL = "FETCH_LOGIN_USER_FAIL",
 }
-
 export const fetchLoginuserRequest = createAction<UserRequestVo>(
   FETCH_LOGIN_USER.REQUEST
 );
-
 export const fetchLoginuserSuccess = createAction<UserResponsetVo>(
   FETCH_LOGIN_USER.SUCCESS
 );
-
 export const fetchLoginFail = createAction<Error>(FETCH_LOGIN_USER.FAIL);
 
 export const type = {

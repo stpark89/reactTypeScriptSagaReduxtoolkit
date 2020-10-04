@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-import LoginContainer from "containers/login/loginContainer";
+import LayoutContainer from "layout";
 
 const App: FunctionComponent = () => {
   return (
@@ -13,7 +13,10 @@ const App: FunctionComponent = () => {
       <Router>
         <Switch>
           <Route path={["/signIn", "sign-in"]}>
-            <LoginContainer />
+            <LayoutContainer />
+          </Route>
+          <Route exact path={["", "/"]}>
+            <LayoutContainer />
           </Route>
           <Route path="*">
             <div>

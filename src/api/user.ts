@@ -7,9 +7,11 @@ export const signIn = async (
   requestVo: UserRequestVo
 ): Promise<UserResponsetVo> => {
   const response = await axios().post<UserResponsetVo>(
-    "/user/loginUser",
+    "/api/sign-in",
     requestVo
   );
+
+  debugger;
 
   if (!isOk(response.status)) {
     throw new Error("Error 발생");
